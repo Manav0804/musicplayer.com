@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+html {
+    font-size: 62.5%;
+    /* font-family: 'Caveat', cursive; */
+    /* font-family: 'Play', sans-serif; */
+}
+
+.music-div {
+    height: 100vh;
+    width: 100vw;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-container {
+    height: 48rem;
+    width: 28rem;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0 0.5rem 3rem 0.5rem rgb(20, 20, 20);
+    padding: 2rem;
+    text-align: center;
+}
+
+.music-container #title {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.3rem;
+    margin-top: 1.2rem ;
+    font-size: 2.6rem;
+    color: rgb(36, 34, 34);
+    /* text-shadow: 0 0.5rem 0.5rem rgb(71, 63, 63); */
+    text-shadow: 0 0.3rem 0.6rem rgb(128, 121, 121);
+    font-family: 'Kurale', serif;
+
+}
+
+.music-container #artist-name {
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.3rem;
+    margin: 1rem 0 2rem 0;
+    font-size: 2rem;
+    color: rgb(139, 139, 139);
+    font-weight: 500;
+    font-family: 'Caveat', cursive;
+}
+
+.img-container {
+    height: 20rem;
+    width: 20rem;
+    margin: auto;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 1rem 3rem 0.5rem rgb(44, 42, 42);
+    object-fit: cover;
+}
+
+.controls {
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem auto;
+}
+
+.controls .fa-solid {
+    font-size: large;
+    cursor: pointer;
+    filter: drop-shadow(0 1rem 3rem 0.5rem rgb(44, 42, 42));
+    color: #111;
+}
+
+.controls .play-button {
+    height: 5rem;
+    width: 5rem;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls .fa-solid:hover {
+    color: gray;
+}
+
+.controls .play-button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 1rem 1.5rem 0.5rem rgb(0, 0, 0, 0.4);
+}
+
+.rotate {
+    animation: rotateDisk 15s linear infinite;
+}
+
+@keyframes rotateDisk {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* progrss bar */
+.progress-bar-container {
+    height: 2rem;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.progress-div {
+    height: 0.3rem;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4), 0 16px 32px rgba(0, 0, 0, 0.4), 0 32px 64px rgba(0, 0, 0, 0.4);
+    /* box-shadow: 0 1px 2px 3px black; */
+    position: relative;
+    margin-top: 0.5rem;
+    /* transition: width 1s linear;
+    -moz-transition: width 1s linear;
+    -o-transition: width 1s linear;
+    -webkit-transition: width 1s linear; */
+    cursor: pointer;
+    /* appearance: none;
+    -webkit-appearance: none; */
+}
+
+.progress {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+    /* transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    -webkit-transition: all 1s linear; */
+    cursor: pointer;
+    /* appearance: none; */
+    /* -webkit-appearance: none; */
+}
+
+.progress-duration {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-family: 'Comic Neue', cursive;
+}
+
+/* .progressColor{
+    animation: proColor 15s linear infinite;
+}
+
+@keyframes proColor {
+    0%{
+        width: 0%;
+        background-color: black;
+    }
+    50%{
+        width: 50%;
+        background-color: cyan;
+    }
+    100%{
+        width: 100%;
+        background-color:pink;
+    }
+} */
